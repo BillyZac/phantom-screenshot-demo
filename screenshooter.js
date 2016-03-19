@@ -17,7 +17,11 @@ var options = {
   }
 }
 
-var fileName = Date.now() + '.png'
-webshot('flickr.com', fileName, options, function(err) {
-  console.log('Image saved:', fileName)
-})
+function takeScreenshot() {
+  var fileName = Date.now() + '.png'
+  webshot('flickr.com', fileName, options, function(err) {
+    console.log('Image saved:', fileName)
+  })
+}
+
+module.exports = takeScreenshot
